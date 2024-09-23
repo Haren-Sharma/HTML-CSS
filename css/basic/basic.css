@@ -1,0 +1,93 @@
+/*
+Style Priority:inline css > internal > external (if external css is included after internal css)
+To change the priority we can specify the !important
+*/
+.abc {
+  background-color: blueviolet;
+}
+p {
+  background-color: aqua !important; /*with this we can change the priority and override the color for abc class*/
+  font-family: "Sofadi One", system-ui; /*custom font*/
+}
+
+/* BOX-SIZING */
+.div1 {
+  /* When you apply box-sizing: border-box,
+    the padding and border are included within the width and height you set. So for the same element: */
+  box-sizing: border-box;
+  width: 200px;
+  height: 100px;
+  padding: 20px;
+  border: 1px solid blue;
+  background-color: aquamarine;
+  margin-bottom: 10px;
+  /* The total width of the element remains exactly 200px because the padding 
+    and border are subtracted from the width. */
+}
+.div2 {
+  /* When you don't use box-sizing: border-box, the width and height apply only to the content. So if you set: */
+  width: 200px;
+  height: 100px;
+  padding: 20px;
+  border: 1px solid blue;
+  background-color: aquamarine;
+  /* The actual width of the element becomes 200px (content) + 20px (padding) + 10px (border) = 230px. */
+}
+
+/*Display Property*/
+/*display property specifies the display behaviour of an element(the type of rendering box)*/
+/*
+1.Block Elements:
+a)New line
+b)Width=Extreme left->Extreme right
+c)Custom width/height and margin/padding are respected 
+E.g.s
+<div>
+<p>
+<h1> to <h6>
+<ul> and <ol> (unordered and ordered lists)
+<li> (list items)
+<section>
+<article>
+<header>
+<footer>
+
+2.Inline ELements:
+a)same line if width of the viewport allows
+b)Custom width/height not allowedz  
+c)Custom padding is allowed
+d)Custom margin is allowed horizontally only and not vertically
+e)Content width
+E.g.s
+<span>
+<a> (anchor or link)
+<strong> and <b> (bold text)
+<em> and <i> (italic text)
+<input> (form inputs, like text fields)
+<label>
+<sup> and <sub> (superscript and subscript)
+
+Now we can change the default behaviour of the elements by specifying the display property
+
+3.Inline-Block property
+a)Behave like inline
+b)Custom height/width are possible
+<img>
+*/
+.div3 {
+  background-color: aquamarine;
+  margin: 15px;
+}
+.span1 {
+  background-color: aqua;
+  margin: 50px;
+  padding: 10px;
+  border: solid 1px blue;
+}
+.span2 {
+  display: inline-block;
+  background-color: blanchedalmond;
+  margin: 50px;
+  padding: 10px;
+  border: solid 1px blue;
+}
