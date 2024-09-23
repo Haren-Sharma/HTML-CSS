@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- 
+Purpose: This declaration defines the document type and version of HTML.
+Explanation: It tells the browser that this document is written in HTML5 (the current version of HTML).
+Without this, the browser might not interpret the page correctly. 
+-->
+<html lang="en">
+  <head>
+    <!--
+        Purpose: This element contains meta-information about the document.
+Explanation: Information inside the <head> tag is not visible on the page itself, but it tells the browser important things about the page, such as the character set, title, and how the page should be displayed.
+        -->
+    <meta charset="UTF-8" />
+    <!--
+    Purpose: Specifies the character encoding for the document.
+Explanation: UTF-8 is a character encoding that can represent virtually all characters in use today, allowing the document to support a wide variety of symbols and letters.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+    Purpose: This tag helps the page display correctly on different devices, especially mobile devices.
+Explanation: The viewport meta tag controls how the page scales and fits on different screen sizes:
+width=device-width: Sets the width of the page to match the width of the user's device (e.g., mobile, tablet, desktop).
+initial-scale=1.0: Ensures that the initial zoom level is set to 100%, meaning the page is displayed without any scaling on load.
+    -->
+    <title>Document</title>
+    <!--
+    Purpose: Defines the title of the document that will appear on the browser tab or when bookmarked.
+    -->
+  </head>
+  <body>
+    <form id="myForm">
+      <label for="username">Enter the username</label>
+      <input type="text" name="username" id="username" />
+      <br />
+      <br />
+      <label for="password">Enter the password</label>
+      <input type="password" name="password" id="password" />
+      <br /><br />
+      <label for="gender">Enter gender:</label>
+      <input type="radio" name="gender" id="male" />
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="female" />
+      <label for="female">Female</label>
+      <br /><br />
+      <label for="department">Department</label>
+      <select name="department" id="department">
+        <option value="IT">IT</option>
+        <option value="Finance">Finance</option>
+      </select>
+      <br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <script src="index.js"></script>
+  </body>
+</html>
