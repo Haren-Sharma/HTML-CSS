@@ -1,0 +1,72 @@
+/*
+By default the position of an element is static,i.e,we cannot apply z-index,top,bottom,etc values to it
+*/
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+.container {
+  position: relative;
+  /*as I have made my div2's position as absolute*/
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  height: 1000px;
+  background-color: rgb(255, 225, 0);
+}
+.internal {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  margin-right: 5px;
+}
+
+/*
+Relative
+1)when we say the position of the element to be realtive.
+Then we are basically saying that it is relative to the current window,
+so that if we set top bottom left right properties,it will
+be set relative to the current window
+2)Old space is also maintained
+*/
+.div1 {
+  background-color: antiquewhite;
+  position: relative;
+  top: 100px;
+}
+
+/*
+Absolute
+1)The element is removed from the normal document flow, and no space is created for the element in the page layout  
+2)Absolute positioned elements are removed from the normal flow, and can overlap elements.
+3)final position is determined by the values of top, right, bottom, and left.
+4)best practice is to make the nearest parent' position as relative,so that by mentioning the top,etc values,
+it will be related to the nearest parent conatiner otherwise it will set the values respective to the body tag
+*/
+.div2 {
+  background-color: aqua;
+  position: absolute;
+  top: 110px;
+}
+
+/*
+Sticky/Fixed
+1)In both the element gets fixed to its position
+2)In case of sticky-it is relative to the parent only
+3)In case of fixed-it is relative to the entire web-page
+*/
+.container2 {
+  background-color: rgb(226, 43, 43);
+  height: 1000px;
+}
+.div3 {
+  position: sticky;
+  top: 10px;
+  /*it is imp to mention otheriwse effect won't be will be shown*/
+  background-color: aquamarine;
+}
+.div4 {
+  position: fixed;
+  background-color: blueviolet;
+}
