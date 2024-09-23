@@ -1,0 +1,47 @@
+/*
+Refer this:
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units
+
+Absolute length:
+1px=1/96th in
+em is relative to the font size of this element, 
+or the font size of the parent element when used for font-size. 
+rem is relative to the font size of the html element.
+
+by default if not mentioned 1em/1rem=16px
+
+1)What is the difference between physical pixel and logical pixel
+Physical pixels are the actual pixels on a screen, controlled by the hardware.
+Logical pixels are abstract units used by software to create a consistent user experience 
+across devices with varying screen densities.
+https://blog.specctr.com/pixels-physical-vs-logical-c84710199d62
+
+2)What is the diference between dpi and ppi
+Aspect	              PPI (Pixels Per Inch)              	     DPI (Dots Per Inch)
+Context	      Digital displays (monitors, smartphones)	    Print media (printers, scanners)
+Definition	  Number of pixels per inch on a screen	        Number of dots per inch on printed paper
+Purpose	      Measures screen clarity/sharpness	            Measures print resolution and quality
+Higher Value 
+Effect	      Higher PPI = sharper digital images	        Higher DPI = sharper printed images
+Typical 
+Values	      72-600 PPI (monitors, smartphones)	        300-2400 DPI (printers)
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+.div1 {
+  margin: 10px;
+  background-color: antiquewhite;
+  height: 50vh; /*view-port height*/
+  width: 50vw; /*view-port width*/
+  border: 1px solid black;
+  font-size: 1.5em; /*24px*/
+  padding-top: 2.5em; /*60px*/
+  padding-left: 2rem; /*32px*/
+}
