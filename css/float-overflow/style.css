@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  border: 1px solid black;
+  margin: 10px;
+  overflow: auto;
+  /*beacuse the container collapsed as soon as the float is set to left for both the div's*/
+}
+.b {
+  border: 2px solid black;
+  width: 200px;
+  height: 200px;
+}
+.box1 {
+  background-color: aqua;
+  float: right;
+}
+.box2 {
+  background-color: aquamarine;
+  float:right;
+  clear: right;/*there should not be a element floating at the right side*/
+}
