@@ -1,0 +1,58 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/*flex-flow:The flex-flow CSS shorthand property specifies the direction of a flex container, 
+as well as its wrapping behavior.
+E.g- flex-flow: row wrap;*/
+/*flex-box properties*/
+.container {
+  padding: 10px;
+  border: 1px solid black;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  height: 800px; /*by increasing the height what happened is there comes gap between the elements when wrapped,
+  to avoid that gap we use align-content property*/
+  /* align-content: start; */
+  /*The flex-wrap CSS property sets whether flex items are forced onto one line or can wrap onto multiple lines.*/
+}
+.item {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+/*flex-items properties*/
+
+.b1 {
+  background-color: aqua;
+  order: 10; /*it will set in the end*/
+
+  /* this item will shrink 3 times faster as compared to others */
+  /* flex-shrink: 3; */
+
+  /* The flex-grow CSS property sets the flex grow factor, which specifies how much of the flex container's positive 
+  free space, if any, should be assigned to the flex item's main size. */
+  /*flex-basis:The flex-basis CSS property sets the initial main size of a flex item. */
+  /*flex:flex-grow flex-shrink flex-basis   =>shorthand notation*/
+  /* flex-grow: 3; */
+  flex: 3 9;
+}
+.b2 {
+  background-color: orange;
+  flex-grow: 1;
+}
+.b3 {
+  background-color: blue;
+  flex-grow: 1;
+}
+.b4 {
+  background-color: yellow;
+  order: -1 /*it will set in the first*/;
+  flex-grow: 1;
+  align-self: center;
+  /*The align-self CSS property overrides a grid or flex item's align-items value. In grid, it aligns the item inside the grid area. In flexbox, it aligns the item on the cross axis.*/
+}
