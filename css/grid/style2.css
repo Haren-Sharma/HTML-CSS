@@ -1,0 +1,34 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  background-color: blanchedalmond;
+  border: 10px solid red;
+  display: grid;
+  place-items: center;
+  /*
+    equivalent to justify-items:center(horzonatl axis)
+    align-item:center(vertical axis)
+    */
+}
+.item {
+  border: 5px solid black;
+  background-color: aqua;
+  height: 200px;
+  width: 200px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  color: green;
+  font-weight: bold;
+  font-size: 2rem;
+  /*justify-self is used to set the position of the element while justify-items is used for child elements*/
+}
