@@ -20,12 +20,30 @@ h2 {
 }
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  /*much better way for esponsive desgin*/
+
+  /* grid-template-rows: repeat(3, 1fr); */
+  /*
+  Why there is no noticeable effect without it?
+  Implicit Grid Behavior: If you don't define grid-template-rows, 
+  the grid will automatically create rows as needed based on the content inside the grid items. 
+  The height of each row will be determined by the tallest item in that row or by the content itself. 
+  This implicit grid behavior might be why removing grid-template-rows doesn’t cause a noticeable effect.
+
+  When grid-template-rows is useful:
+  It becomes important when you want to explicitly control the height of each row in the grid.
+  For example, grid-template-rows: repeat(3, 1fr) ensures that there are three equally spaced rows, 
+  regardless of their content.
+  If your content naturally fits into the grid without specific row heights, 
+  then removing grid-template-rows might not show any visual difference. 
+  The browser will handle the row heights based on the content, and in some cases, 
+  this implicit behavior is sufficient.
+  */
   gap: 25px;
-  padding-left: 100px;
-  padding-right: 100px;
-  margin-top: 50px;
+  width: 80vw;
+  margin: 0 auto;
 }
 .card {
   display: flex;
@@ -41,11 +59,15 @@ h2 {
   height: 55%;
   width: 100%;
 }
+.card:hover .image {
+  transform: scale(1.1);
+  transition: 200ms;
+}
 .title {
   font-weight: bold;
   padding: 0px 20px;
   margin-top: 15px;
-  flex: 1 ;
+  flex: 1;
 }
 .text {
   padding: 0px 20px;
@@ -53,11 +75,9 @@ h2 {
 }
 .profile {
   display: grid;
-  flex: 1;  
+  flex: 1;
   grid-template-columns: repeat(5, 1fr);
-  /* background-color: aqua; */
-  align-items: center ;
-  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
   padding: 10px 20px;
 }
 
@@ -91,6 +111,3 @@ h2 {
   grid-column-end: 6;
   text-align: center;
 }
-@media (max-width:1384px){
-  
-} 
